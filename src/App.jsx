@@ -1,24 +1,21 @@
-// import './App.css'
-import FooterApp from './components/Footer/Footer'
-import NavBar from './components/NavBar/NavBar'
-import TabsMenu from './components/TabsMenu/TabsMenu'
-import { BrowserRouter } from 'react-router-dom'
-import Quienes from './pages/QuienesSomos/Quienes'
-import ContainerGaleria from './pages/Galeria/ContainerGaleria'
+import { AppTheme } from './theme'
+import { NavBar } from './components/NavBar/NavBar'
+import { FooterApp } from './components/Footer/Footer'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { PaginaPrincipal } from './pages/PaginaPrincipal/PaginaPrincipal'
+import { DetalleProductoContainer } from './pages/DetalleProductoContainer/DetalleProductoContainer'
 
-
-function App() {
+export const PronetApp = () => {
   return (
-    <>
-      <BrowserRouter>
-        <NavBar />        
-        <TabsMenu />
-        <Quienes />
-        <ContainerGaleria />
-        <FooterApp />
-      </BrowserRouter>
-    </>
+    <AppTheme>          
+      <NavBar />
+      <Routes>
+        <Route path='/' element={ <PaginaPrincipal /> } />
+        <Route path='/producto/:productoCategoria' element={ <DetalleProductoContainer /> } />
+        <Route path='/*' element={ <Navigate to='/' /> } />
+      </Routes>
+      <FooterApp />     
+    </AppTheme>
   )
 }
 
-export default App

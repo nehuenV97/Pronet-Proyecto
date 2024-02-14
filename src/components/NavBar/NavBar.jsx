@@ -1,36 +1,87 @@
-import { AppBar, Box, Toolbar, Button, Typography } from '@mui/material'
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
-// import Typography from '@mui/material/Typography';
-// import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
-const NavBar = () => {
+import { AppBar, Box, Button, Drawer, IconButton, Toolbar } from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import AppsIcon from '@mui/icons-material/Apps';
+import GroupIcon from '@mui/icons-material/Group';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+
+import logoPronet from '../../assets/pronetLogo.svg';
+import { ButtonNavbar } from './ButtonNavbar';
+import { NavListDrawer } from './NavListDrawer';
+import { SX_BOX_NAVLINKS, SX_ICON_BUTTON, SX_NAVLINK_CONTAINED, SX_PRONET_SVG } from './sxNavbar';
+
+const botonNavbar = [
+  { titulo: 'Inicio', path: '/#', icono: <HomeOutlinedIcon/> },
+  { titulo: 'Producto', path: '/#producto', icono: <AppsIcon/> },
+  { titulo: '¿Quienes Somos?', path: '/#quienes', icono: <GroupIcon /> }
+]
+
+export const NavBar = () => {
+
+  const [ open, setOpen ] = useState(false);
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            Pronet: Redes de seguridad
-          </Typography>          
-          <Button color="inherit">¿Quienes somos?</Button>
-          <Button color="inherit">Galería</Button>
-          <Button color="inherit">Contacto</Button>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <>
+      <Box sx={{ flexGrow: 1, paddingBottom: { xs: '40px', sm: '105px' } }}>
+        <AppBar position="fixed">
+          <Toolbar sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>          
+            
+            <Box sx={{ display: 'flex', flexDirection: 'row'}}>
+              <IconButton
+                onClick={ () => setOpen(true) }                
+                color="blueTerciary"                
+                sx={ SX_ICON_BUTTON }
+              >
+                <MenuIcon />
+              </IconButton>             
+
+              <Box 
+                component='img' 
+                src={logoPronet} 
+                alt='Logo Pronet' 
+                sx={ SX_PRONET_SVG }
+              />
+
+            </Box>              
+              
+            <Box sx={ SX_BOX_NAVLINKS }>
+              {
+                botonNavbar.map( item => (
+                  <ButtonNavbar 
+                    key={ item.titulo }
+                    to={ item.path }                      
+                  >
+                    {item.titulo}{item.icono}
+                  </ButtonNavbar>
+                ))
+              }
+
+              <Button
+                variant='contained'
+                color='blueTerciary' 
+                component={ HashLink }
+                smooth
+                to='/#contacto'
+                sx={ SX_NAVLINK_CONTAINED }  
+              >
+                Contáctenos <LocalPhoneIcon/>
+              </Button>
+            </Box>                      
+          </Toolbar>
+        </AppBar>
+      </Box>
+
+      <Drawer
+        sx={{ display: { xs: 'flex', sm: 'none' }}}       
+        open={open}
+        anchor='top'
+        onClose={ () => setOpen(false) }
+      >
+        <NavListDrawer />
+      </Drawer>
+    </>
   );
 }
-
-export default NavBar;
