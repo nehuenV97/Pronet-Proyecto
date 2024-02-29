@@ -9,7 +9,7 @@ export const ItemCarrusel = ({imageUrl, alt}) => {
       <CardMedia        
         component={'img'}
         alt={ alt }
-        image={ imageUrl }
+        src={ imageUrl }
         height='100%'
         width='100%'     
         sx={{ objectFit: 'fill'}} 

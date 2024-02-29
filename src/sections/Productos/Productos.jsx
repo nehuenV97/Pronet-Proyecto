@@ -37,7 +37,7 @@ export const Productos = () => {
               sx={ SX_BOX_ITEM_PRODUCTO }
             >
               {
-                productos.map( producto => (
+                productos?.map( producto => (
                   <ItemProducto 
                     key={ producto.id }
                     titulo={ producto.titulo }

@@ -41,7 +41,7 @@ export const Carrusel = ( { dataCarrusel }) => {
         sx={ SX_CONTAINER_ITEM_CARRUSEL }
       >
         {
-          visibleImages.map( item => (
+          visibleImages?.map( item => (
             <ItemCarrusel 
               key={ item.id } 
               imageUrl={ item.imageURL }

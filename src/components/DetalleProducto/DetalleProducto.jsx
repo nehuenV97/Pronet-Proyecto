@@ -12,7 +12,7 @@ export const DetalleProducto = ({ imageUrl, titulo, descripcion, categoria }) =>
             component="img"
             alt={ categoria }
             height="340"
-            image={ imageUrl }
+            src={ imageUrl }
         />
         <CardContent>
             <Typography gutterBottom variant="h5" component="div"

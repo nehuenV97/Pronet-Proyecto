@@ -13,12 +13,12 @@ export const Formulario = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        console.log( nombre, celular, email, producto, medidas)
     }
 
   return (
     <>
-        <form name='formulario-pronet' onSubmit={ handleSubmit } netlify>
+        <form name='formulario-pronet' onSubmit={ handleSubmit }>
             <Grid container spacing={3}
                 sx={ SX_FORMULARIO }
             >

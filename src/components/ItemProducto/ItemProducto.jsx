@@ -17,9 +17,12 @@ export const ItemProducto = ({ titulo, descripcion, imageUrl, categoria }) => {
     >
       <CardActionArea>
         <CardMedia
-          sx={{ height: 142 }}
-          image={ imageUrl }
+          component="img"
+          // sx={{ height: 142 }}
+          height="142"
+          src={ imageUrl }
           title={ titulo }
+          alt={ categoria }
         />
         <CardContent>
           <Typography
