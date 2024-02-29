@@ -32,30 +32,47 @@ export const Carrusel = ( { dataCarrusel }) => {
   );
 
   return (
-    <Box sx={ SX_CARRUSEL }>
-      <ButtonCarrusel onClick={ goToPrevSlide }>
-          <ArrowBackIcon sx={{ fontSize: 25 }} />
-      </ButtonCarrusel>
+    <>
+      <Box sx={ SX_CARRUSEL }>
+        <ButtonCarrusel onClick={ goToPrevSlide }>
+            <ArrowBackIcon sx={{ fontSize: 25 }} />
+        </ButtonCarrusel>
+        
+        {/* SOLUCIONAR  */}
+        <Box
+          sx={{...SX_CONTAINER_ITEM_CARRUSEL, display: 'none' }}
+        >
+          {
+            dataCarrusel?.map( item => (
+              <ItemCarrusel 
+                key={ item.id } 
+                imageUrl={ item.imageURL }
+                alt={ item.alt }
+              />
+            ))
+          }
+        </Box>
 
-      <Box
-        sx={ SX_CONTAINER_ITEM_CARRUSEL }
-      >
-        {
-          visibleImages?.map( item => (
-            <ItemCarrusel 
-              key={ item.id } 
-              imageUrl={ item.imageURL }
-              alt={ item.alt }
-            />
-          ))
-        }
+        <Box
+          sx={ SX_CONTAINER_ITEM_CARRUSEL }
+        >
+          {
+            visibleImages?.map( item => (
+              <ItemCarrusel 
+                key={ item.id } 
+                imageUrl={ item.imageURL }
+                alt={ item.alt }
+              />
+            ))
+          }
+        </Box>
+        
+        <ButtonCarrusel onClick={ goToNextSlide }>
+          <ArrowForwardIcon sx={{ fontSize: 25 }} />
+        </ButtonCarrusel>
+                        
       </Box>
-      
-      <ButtonCarrusel onClick={ goToNextSlide }>
-        <ArrowForwardIcon sx={{ fontSize: 25 }} />
-      </ButtonCarrusel>
-                       
-    </Box>
+    </>
   )
 }
 

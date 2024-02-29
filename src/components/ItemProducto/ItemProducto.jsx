@@ -15,7 +15,7 @@ export const ItemProducto = ({ titulo, descripcion, imageUrl, categoria }) => {
     <Card
       sx={ SX_ITEM_PRODUCTO }
     >
-      <CardActionArea>
+      
         <CardMedia
           component="img"
           // sx={{ height: 142 }}
@@ -40,7 +40,7 @@ export const ItemProducto = ({ titulo, descripcion, imageUrl, categoria }) => {
             { descripcion }
           </Typography>
         </CardContent>
-      </CardActionArea>
+      
 
       <CardActions 
         sx={{ 
