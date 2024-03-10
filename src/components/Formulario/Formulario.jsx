@@ -13,12 +13,18 @@ export const Formulario = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log( nombre, celular, email, producto, medidas)
+        console.log( nombre, celular, email, producto, medidas);
+        setNombre('');
+        setCelular('');
+        setEmail('');
+        setProducto('');
+        setMedidas('');
     }
 
   return (
     <>
         <form name='formulario-pronet' onSubmit={ handleSubmit }>
+            <input type="hidden" name="form-name" value="formulario-pronet" />
             <Grid container spacing={3}
                 sx={ SX_FORMULARIO }
             >
@@ -73,7 +79,7 @@ export const Formulario = () => {
                 <Grid item xs={ 12 }>                    
                     <TextField
                         name="producto"
-                        id="producto"
+                        id="producto"                       
                         select
                         label="Producto"
                         defaultValue="Balcon"                        
