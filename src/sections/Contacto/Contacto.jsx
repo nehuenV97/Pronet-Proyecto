@@ -1,8 +1,11 @@
 import { Box, Grid } from "@mui/material"
 import { ContainerTexto } from "../../components/ContainerTexto/ContainerTexto"
-import { Formulario } from "../../components/Formulario/Formulario"
+// import { Formulario } from "../../components/Formulario/Formulario";
 import { RedesSociales } from "../../components/RedesSociales/RedesSociales"
 import { SX_GRID_ITEM_CONTACTO } from "./sxContacto"
+import { FormInfo } from "../../components/Formulario/FormInfo"
+
+import './stylesContacto.css';
 
 export const Contacto = () => {
   return (   
@@ -49,7 +52,8 @@ export const Contacto = () => {
           sx={ SX_GRID_ITEM_CONTACTO }
         > 
           <Box sx={{ width: '90%', mt: 3, mb: 4, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <Formulario />          
+            {/* <Formulario />           */}
+            <FormInfo />
           </Box> 
         </Grid>
       </Grid>
