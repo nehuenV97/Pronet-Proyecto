@@ -36,7 +36,7 @@ export const dataCarrusel = [
     },
     {
         id: '8',        
-        imageURL: '/src/assets/pronetLogo.svg',
+        imageURL: '/src/assets/logoPronet-2.svg',
         alt: 'imagen-8'        
     },
     {
@@ -61,7 +61,7 @@ export const dataCarrusel = [
     },
     {
         id: '13',        
-        imageURL: '/src/assets/pronetLogo.svg',
+        imageURL: '/src/assets/logoPronet-2.svg',
         alt: 'imagen-13'        
     },
     {

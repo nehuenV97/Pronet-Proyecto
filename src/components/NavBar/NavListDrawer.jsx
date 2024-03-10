@@ -16,7 +16,7 @@ const botonDrawer = [
 export const NavListDrawer = () => {
   return (
     <Box
-        sx={{ bgcolor: 'primary.main' }}
+        sx={{ bgcolor: 'blueTerciary.main' }}
     >
         <List>
             {
@@ -30,7 +30,7 @@ export const NavListDrawer = () => {
                         <ListItemIcon 
                             sx={{
                                 '& .MuiSvgIcon-root': {
-                                    color: 'blueTerciary.main'
+                                    color: 'primary.main'
                                 }
                             }}
                         >
@@ -42,7 +42,7 @@ export const NavListDrawer = () => {
                                     fontFamily: 'Parsi',
                                     fontWeight: 700,
                                     fontSize: 18,
-                                    color: 'blueTerciary.main'
+                                    color: 'primary.main'
                                 }
                             }}
                         >

@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from "@mui/material"
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import RoomOutlinedIcon from '@mui/icons-material/RoomOutlined';
 
-import logoPronet from '../../assets/pronetLogo.svg';
+import logoPronet from '../../assets/logoPronet-2.svg';
 import mapaPronet  from '../../assets/mapaPronet.svg';
 import { RedesSociales } from "../RedesSociales/RedesSociales";
 import { SX_BOX_DIRECCION, SX_BOX_REDES, SX_BOX_TELEFONO, SX_GRID_CONTAINER_FOOTER, SX_GRID_ITEM_1_FOOTER, SX_GRID_ITEM_2_FOOTER, SX_MAPA_FOOTER, SX_TEXTO_DIRECCION, SX_TEXTO_TELEFONO } from "./sxFooter";
@@ -25,8 +25,8 @@ export const FooterApp = () => {
                             sx={ SX_BOX_REDES }
                         >
                             <RedesSociales 
-                                backColor={'blueTerciary'}
-                                color={'primary.main'}
+                                backColor={'primary'}
+                                color={'blueTerciary.main'}
                                 hoverBackColor={'blueSecondary.main'}
                             />
                         </Box>

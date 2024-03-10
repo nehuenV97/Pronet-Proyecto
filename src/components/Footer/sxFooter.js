@@ -1,7 +1,7 @@
 export const SX_GRID_CONTAINER_FOOTER = {
     position: 'relative', 
     bottom: 0, 
-    backgroundColor: 'primary.main',       
+    backgroundColor: 'blueTerciary.main',       
     p: 1, 
     pt: 4
 }
@@ -48,7 +48,7 @@ export const SX_TEXTO_DIRECCION = {
     fontFamily: 'Parsi',
     fontWeight: 400,
     fontSize: 18,
-    color: 'blueTerciary.main',
+    color: 'primary.main',
     lineHeight: 0.9,
     mb: 1
 }
@@ -64,6 +64,6 @@ export const SX_TEXTO_TELEFONO = {
     fontFamily: 'Parsi',
     fontWeight: 400,
     fontSize: 18,
-    color: 'blueTerciary.main',
+    color: 'primary.main',
     display: 'flex'
 }

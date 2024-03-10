@@ -4,7 +4,7 @@ export const SX_ICON_BUTTON = {
         sm: 'none' 
     }, 
     "&:hover": {
-        color: 'blueSecondary.main'
+        color: 'secondary.main'
     }
 }
 
@@ -22,7 +22,7 @@ export const SX_BOX_NAVLINKS = {
         xs: 'none', 
         sm: 'flex' 
     }, 
-    gap: 1,
+    gap: 3,
     flexWrap: 'wrap' 
 }
 
@@ -31,9 +31,10 @@ export const SX_NAVLINK_CONTAINED = {
     fontWeight: 700, 
     fontSize: 20,
     textTransform: 'capitalize',
-    color: 'primary.main',
+    color: 'blueTerciary.main',
     borderRadius: 20,
     "&:hover": {
-      backgroundColor: 'blueSecondary.main'
+      backgroundColor: 'terciary.main',
+      color: 'primary.main'
     }
   }

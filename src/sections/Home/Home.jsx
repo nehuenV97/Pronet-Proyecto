@@ -35,11 +35,11 @@ export const Home = () => {
                     hoverColor={'primary.main'}
                 />
 
-                <Box
+                {/* <Box
                     sx={{ width: '100%', display: 'flex', justifyContent: 'end', mt: 5}}
                 >
                     <WhatsappButton />    
-                </Box>  
+                </Box>   */}
                           
             </Box>
             <Box>
@@ -56,7 +56,8 @@ export const Home = () => {
                     />
                    
                 </Box>
-            </Box>
+            </Box>            
+            <WhatsappButton />            
         </Box>
     </>
   )

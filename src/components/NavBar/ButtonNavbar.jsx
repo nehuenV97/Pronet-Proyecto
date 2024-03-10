@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link"
 export const ButtonNavbar = ( { children, to } ) => {
   return (
     <Button
-        color='blueTerciary'
+        color='primary'
         component={ HashLink }
         smooth
         to={ to }        
@@ -15,7 +15,7 @@ export const ButtonNavbar = ( { children, to } ) => {
             textTransform: 'capitalize',
             borderRadius: 20,
             "&:hover": {
-                color: 'blueSecondary.main'
+                color: 'secondary.main'
             }
         }}>
         { children }

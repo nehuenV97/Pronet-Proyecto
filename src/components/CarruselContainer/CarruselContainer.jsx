@@ -16,7 +16,7 @@ export const CarruselContainer = () => {
             titulo={'Nuestros Trabajos Previos'}
             subtitulo={'Galería'}
           />
-          <Carrusel dataCarrusel={ dataCarrusel } />
+          <Carrusel dataCarrusel={ dataCarrusel }/>
         </Box>
       </Box>
     </>
